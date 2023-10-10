@@ -1,4 +1,4 @@
-function checktemp(temperatuur) {
+function checkTemp(temperatuur) {
     if (temperatuur >= 0 && temperatuur <= 20) {
      return -1;
     } else if (temperatuur >= 21 && temperatuur <= 40) {
