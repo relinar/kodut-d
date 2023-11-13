@@ -31,10 +31,21 @@ var tellimus = {
         "vat": 0.2 
       } 
     ] 
-  };
-  
-  console.log(tellimus)
-  
-  let totalAmount = tellimus.rows.reduce((total, item) => total + (item.amount * item.price), 0);
-  
-  console.log(`Total Order Amount: ${totalAmount}`);
+  } 
+function orderSummary(order){
+    let sum = 0
+    for(let i = 0; i < tellimus.rows.length; i+=1){
+        let item = tellimus.rows[i]
+        console.log("i on " + i)
+        let vaheSumma = item.price * item.amount * (item.vat+1)
+        sum+=vaheSumma
+        console.log(sum)
+
+        console.log(item.name)
+        console.log("Kogus: \t\t\t",item.amount)
+        console.log("Hind: \t\t\t",item.price)
+        console.log("Vahesumma: \t\t", vaheSumma)
+
+    }
+    console.log("Kogusumma", sum)
+}
